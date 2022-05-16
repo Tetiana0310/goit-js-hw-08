@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash.throttle"));function t(e){return e&&e.__esModule?e:{default:e}}const a=document.querySelector(".feedback-form"),s="feedback-form-state";let l={};function n(){const e=localStorage.getItem(s);if(e){const{email:t,message:s}=JSON.parse(e);a.email.value=l.email,a.message.value=l.message,l.email=t,l.message=s}}function o(e){l.email=a.elements.email.value,l.message=a.elements.message.value,localStorage.setItem(s,JSON.stringify(l))}function r(e){e.preventDefault(),e.currentTarget.reset(),localStorage.removeItem(s),console.log(l)}a.addEventListener("submit",r),a.addEventListener("input",(0,e.default)(o,500)),n();
 },{"lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-js-hw-08.git/03-feedback.1361015a.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.1361015a.js.map
