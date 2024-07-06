@@ -66,3 +66,24 @@ console.log(createImagesMarkup(images));
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML('beforeend', createImagesMarkup(images));
+
+gallery.addEventListener("click", onImageClick);
+
+function onImageClick(event) {
+  event.preventDefault();
+
+  if (event.currentTarget === event.target) {
+    return;
+  }
+
+  const instance = basicLightbox.create(
+    `<div class="modal">
+      <img
+        class="modal-image"
+        src="${event.target.dataset.source}"
+        alt="${event.target.alt}"
+      >
+    </div>`
+  );
+  instance.show()
+}
