@@ -78,7 +78,7 @@ function createImagesMarkup(images) {
 </li>`).join("")
 }
 
-// console.log(createImagesMarkup(images))
+console.log(createImagesMarkup(images))
 
 const gallery = document.querySelector(".gallery")
 
